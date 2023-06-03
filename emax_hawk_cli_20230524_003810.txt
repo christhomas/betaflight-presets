@@ -1,0 +1,92 @@
+defaults nosave
+
+
+# version
+# Betaflight / STM32F405 (S405) 4.4.1 Apr 11 2023 / 11:41:07 (e43d591b2) MSP API: 1.45
+
+# config: YES
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name MATEKF405CTR
+manufacturer_id MTKS
+mcu_id 001b00344d4b500220313252
+signature 
+
+# feature
+feature -TELEMETRY
+feature RSSI_ADC
+
+# serial
+serial 0 64 115200 57600 0 115200
+serial 1 2048 115200 57600 0 115200
+
+# aux
+aux 0 0 0 1000 2000 0 0
+aux 1 1 1 1000 2000 0 0
+aux 2 13 2 1000 2000 0 0
+
+# vtxtable
+vtxtable bands 5
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY 5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B FACTORY 5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E FACTORY 5705 5685 5665 5645 5885 5905 5925 5945
+vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable powerlevels 2
+vtxtable powervalues 0 1
+vtxtable powerlabels 25 200
+
+# master
+set acc_calibration = -85,125,-129,1
+set motor_pwm_protocol = DSHOT600
+set motor_output_reordering = 2,0,3,1,4,5,6,7
+set small_angle = 180
+set osd_vbat_pos = 2433
+set osd_link_quality_pos = 2145
+set osd_rssi_dbm_pos = 2113
+set osd_vtx_channel_pos = 2401
+set osd_ah_pos = 2126
+set osd_craft_name_pos = 2441
+set osd_home_dist_pos = 2177
+set osd_compass_bar_pos = 2122
+set osd_warnings_pos = 14729
+set osd_canvas_width = 30
+set osd_canvas_height = 13
+set vtx_band = 4
+set vtx_channel = 1
+set vtx_power = 1
+set vtx_freq = 5740
+set gyro_1_align_yaw = 2700
+
+profile 0
+
+# profile 0
+set f_yaw = 90
+
+profile 1
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+# restore original rateprofile selection
+rateprofile 2
+
+# save configuration
