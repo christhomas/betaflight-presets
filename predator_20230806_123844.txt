@@ -1,0 +1,273 @@
+defaults nosave
+
+###WARNING: NO CUSTOM DEFAULTS FOUND###
+
+# version
+# Betaflight / STM32F7X2 (S7X2) 4.3.0 Jun 14 2022 / 00:50:37 (229ac66) MSP API: 1.44
+###ERROR IN diff: NO CONFIG FOUND###
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name EMAXF7
+manufacturer_id EMAX
+mcu_id 001600275632500520303236
+signature 
+
+# name: Predator
+
+# resources
+resource BEEPER 1 C15
+resource MOTOR 1 B01
+resource MOTOR 2 B03
+resource MOTOR 3 B00
+resource MOTOR 4 B04
+resource MOTOR 5 C09
+resource MOTOR 6 C08
+resource PPM 1 A03
+resource LED_STRIP 1 A08
+resource SERIAL_TX 1 A09
+resource SERIAL_TX 2 A02
+resource SERIAL_TX 3 B10
+resource SERIAL_TX 4 A00
+resource SERIAL_TX 5 C12
+resource SERIAL_TX 6 C06
+resource SERIAL_RX 1 A10
+resource SERIAL_RX 2 A03
+resource SERIAL_RX 3 B11
+resource SERIAL_RX 4 A01
+resource SERIAL_RX 5 D02
+resource SERIAL_RX 6 C07
+resource I2C_SCL 1 B06
+resource I2C_SDA 1 B07
+resource LED 1 A15
+resource SPI_SCK 1 A05
+resource SPI_SCK 2 B13
+resource SPI_SCK 3 C10
+resource SPI_MISO 1 A06
+resource SPI_MISO 2 B14
+resource SPI_MISO 3 C11
+resource SPI_MOSI 1 A07
+resource SPI_MOSI 2 B15
+resource SPI_MOSI 3 B05
+resource CAMERA_CONTROL 1 B08
+resource ADC_BATT 1 C02
+resource ADC_RSSI 1 C00
+resource ADC_CURR 1 C01
+resource PINIO 1 C14
+resource PINIO 2 B09
+resource FLASH_CS 1 C13
+resource OSD_CS 1 B12
+resource GYRO_EXTI 1 C04
+resource GYRO_EXTI 2 C03
+resource GYRO_CS 1 B02
+resource GYRO_CS 2 A04
+
+# timer
+timer A03 AF3
+# pin A03: TIM9 CH2 (AF3)
+timer B00 AF2
+# pin B00: TIM3 CH3 (AF2)
+timer B01 AF2
+# pin B01: TIM3 CH4 (AF2)
+timer B04 AF2
+# pin B04: TIM3 CH1 (AF2)
+timer B03 AF1
+# pin B03: TIM2 CH2 (AF1)
+timer C09 AF3
+# pin C09: TIM8 CH4 (AF3)
+timer C08 AF3
+# pin C08: TIM8 CH3 (AF3)
+timer A08 AF1
+# pin A08: TIM1 CH1 (AF1)
+timer B08 AF2
+# pin B08: TIM4 CH3 (AF2)
+
+# dma
+dma ADC 3 1
+# ADC 3: DMA2 Stream 1 Channel 2
+dma pin B00 0
+# pin B00: DMA1 Stream 7 Channel 5
+dma pin B01 0
+# pin B01: DMA1 Stream 2 Channel 5
+dma pin B04 0
+# pin B04: DMA1 Stream 4 Channel 5
+dma pin B03 0
+# pin B03: DMA1 Stream 6 Channel 3
+dma pin C09 0
+# pin C09: DMA2 Stream 7 Channel 7
+dma pin C08 0
+# pin C08: DMA2 Stream 2 Channel 0
+dma pin A08 0
+# pin A08: DMA2 Stream 6 Channel 0
+dma pin B08 0
+# pin B08: DMA1 Stream 7 Channel 2
+
+# feature
+feature -RX_PARALLEL_PWM
+feature RX_SERIAL
+feature TELEMETRY
+feature OSD
+
+# serial
+serial 1 64 115200 57600 0 115200
+serial 2 1 115200 57600 0 115200
+serial 4 2048 115200 57600 0 115200
+
+# beacon
+beacon RX_SET
+
+# aux
+aux 0 0 0 900 1300 0 0
+aux 1 1 1 900 1300 0 0
+aux 2 2 1 1800 2100 0 0
+aux 3 13 2 1200 1800 0 0
+aux 4 35 3 1700 2100 0 0
+
+# vtxtable
+vtxtable bands 5
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 2 BOSCAM_B B CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 3 BOSCAM_E E CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 4 FATSHARK F CUSTOM     0 5760    0 5800    0    0    0    0
+vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable powerlevels 3
+vtxtable powervalues 14 23 0
+vtxtable powerlabels 25 200 0
+
+# master
+set gyro_lpf1_static_hz = 275
+set gyro_lpf2_static_hz = 550
+set gyro_to_use = SECOND
+set dyn_notch_count = 1
+set dyn_notch_q = 500
+set dyn_notch_min_hz = 100
+set gyro_lpf1_dyn_min_hz = 275
+set gyro_lpf1_dyn_max_hz = 550
+set acc_calibration = -112,11,-131,1
+set mag_hardware = NONE
+set baro_bustype = I2C
+set baro_i2c_device = 1
+set baro_hardware = NONE
+set serialrx_provider = CRSF
+set adc_device = 3
+set blackbox_device = SPIFLASH
+set dshot_idle_value = 300
+set dshot_burst = ON
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT600
+set failsafe_delay = 4
+set failsafe_recovery_delay = 20
+set align_board_yaw = 90
+set current_meter = ADC
+set battery_meter = ADC
+set ibata_scale = 450
+set beeper_inversion = ON
+set beeper_od = OFF
+set small_angle = 180
+set pid_process_denom = 2
+set simplified_gyro_filter_multiplier = 110
+set frsky_unit = IMPERIAL
+set osd_vbat_pos = 2498
+set osd_rssi_pos = 2102
+set osd_tim_1_pos = 2484
+set osd_flymode_pos = 2082
+set osd_vtx_channel_pos = 2516
+set osd_current_pos = 340
+set osd_craft_name_pos = 2058
+set osd_display_name_pos = 298
+set osd_warnings_pos = 329
+set osd_avg_cell_voltage_pos = 2466
+set osd_battery_usage_pos = 424
+set osd_displayport_device = MSP
+set vtx_band = 5
+set vtx_channel = 1
+set vtx_power = 1
+set vtx_freq = 5658
+set max7456_spi_bus = 2
+set displayport_msp_serial = 2
+set pinio_box = 40,41,255,255
+set flash_spi_bus = 3
+set gyro_1_bustype = SPI
+set gyro_1_spibus = 1
+set gyro_1_sensor_align = CW90
+set gyro_1_align_yaw = 900
+set gyro_2_spibus = 1
+set gyro_2_sensor_align = CW90
+set gyro_2_align_yaw = 900
+set name = Predator
+
+profile 0
+
+# profile 0
+set dterm_lpf1_dyn_min_hz = 63
+set dterm_lpf1_dyn_max_hz = 127
+set dterm_lpf1_static_hz = 63
+set dterm_lpf2_static_hz = 127
+set iterm_relax_cutoff = 25
+set p_pitch = 41
+set d_pitch = 51
+set f_pitch = 156
+set p_roll = 39
+set d_roll = 44
+set f_roll = 150
+set p_yaw = 39
+set f_yaw = 150
+set d_min_roll = 31
+set d_min_pitch = 36
+set d_max_advance = 0
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 65
+set feedforward_jitter_factor = 5
+set feedforward_boost = 18
+set feedforward_max_rate_limit = 95
+set dyn_idle_min_rpm = 35
+set dyn_idle_p_gain = 40
+set simplified_master_multiplier = 125
+set simplified_i_gain = 115
+set simplified_d_gain = 85
+set simplified_pi_gain = 70
+set simplified_dmax_gain = 120
+set simplified_dterm_filter_multiplier = 85
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 90
+set pitch_rc_rate = 90
+set yaw_rc_rate = 90
+set roll_expo = 20
+set pitch_expo = 20
+set yaw_expo = 20
+set roll_srate = 73
+set pitch_srate = 74
+set yaw_srate = 75
+set tpa_breakpoint = 1250
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 96
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
