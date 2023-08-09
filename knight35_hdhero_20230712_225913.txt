@@ -1,0 +1,59 @@
+defaults nosave
+
+
+# version
+# Betaflight / STM32F411 (S411) 4.4.2 Jun  1 2023 / 02:55:39 (23d066d08) MSP API: 1.45
+
+# config: YES
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name BETAFPVF411
+manufacturer_id BEFH
+mcu_id 005900313535510436323431
+signature 
+
+# name: hdhero
+
+# serial
+serial 0 0 115200 57600 0 115200
+serial 1 64 115200 57600 0 115200
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# master
+set acc_calibration = 1,60,47,1
+set small_angle = 180
+set osd_canvas_width = 30
+set osd_canvas_height = 13
+set craft_name = hdhero
+
+profile 0
+
+profile 1
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration

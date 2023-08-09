@@ -1,0 +1,296 @@
+semver: 2.8.0
+header: 
+   name: "BETA65S"
+telemetryProtocol: 0
+thrTrim: 0
+noGlobalFunctions: 0
+displayTrims: 2
+ignoreSensorIds: 0
+trimInc: 0
+disableThrottleWarning: 0
+displayChecklist: 0
+extendedLimits: 0
+extendedTrims: 0
+throttleReversed: 0
+enableCustomThrottleWarning: 0
+customThrottleWarningPosition: 0
+beepANACenter: 0
+mixData: 
+ -
+   weight: 100
+   destCh: 0
+   srcRaw: I0
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   offset: 0
+   swtch: "NONE"
+   flightModes: 000000000
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: ""
+ -
+   weight: 100
+   destCh: 1
+   srcRaw: I2
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   offset: 0
+   swtch: "NONE"
+   flightModes: 000000000
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: ""
+ -
+   weight: 100
+   destCh: 2
+   srcRaw: I1
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   offset: 0
+   swtch: "NONE"
+   flightModes: 000000000
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: ""
+ -
+   weight: 100
+   destCh: 3
+   srcRaw: I3
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   offset: 0
+   swtch: "NONE"
+   flightModes: 000000000
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: ""
+ -
+   weight: 100
+   destCh: 4
+   srcRaw: SC
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   offset: 0
+   swtch: "NONE"
+   flightModes: 000000000
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: ""
+ -
+   weight: 100
+   destCh: 5
+   srcRaw: SD
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   offset: 0
+   swtch: "NONE"
+   flightModes: 000000000
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: ""
+ -
+   weight: 100
+   destCh: 6
+   srcRaw: SA
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   offset: 0
+   swtch: "NONE"
+   flightModes: 000000000
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: ""
+ -
+   weight: 100
+   destCh: 7
+   srcRaw: SB
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   offset: 0
+   swtch: "NONE"
+   flightModes: 000000000
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: ""
+expoData: 
+ -
+   mode: 3
+   scale: 0
+   srcRaw: Ail
+   carryTrim: 0
+   chn: 0
+   swtch: "NONE"
+   flightModes: 000000000
+   weight: 100
+   name: ""
+   offset: 0
+   curve: 
+      type: 1
+      value: 0
+ -
+   mode: 3
+   scale: 0
+   srcRaw: Thr
+   carryTrim: 0
+   chn: 1
+   swtch: "NONE"
+   flightModes: 000000000
+   weight: 100
+   name: ""
+   offset: 0
+   curve: 
+      type: 2
+      value: 0
+ -
+   mode: 3
+   scale: 0
+   srcRaw: Ele
+   carryTrim: 0
+   chn: 2
+   swtch: "NONE"
+   flightModes: 000000000
+   weight: 100
+   name: ""
+   offset: 0
+   curve: 
+      type: 1
+      value: 0
+ -
+   mode: 3
+   scale: 0
+   srcRaw: Rud
+   carryTrim: 0
+   chn: 3
+   swtch: "NONE"
+   flightModes: 000000000
+   weight: 100
+   name: ""
+   offset: 0
+   curve: 
+      type: 1
+      value: 0
+ -
+   mode: 3
+   scale: 0
+   srcRaw: MAX
+   carryTrim: 0
+   chn: 6
+   swtch: "NONE"
+   flightModes: 000000000
+   weight: 100
+   name: ""
+   offset: 0
+   curve: 
+      type: 1
+      value: 0
+curves: 
+   0:
+      type: 0
+      smooth: 1
+      points: 0
+      name: ""
+points: 
+   0:
+      val: -100
+   2:
+      val: 60
+   3:
+      val: 85
+   4:
+      val: 100
+flightModeData: 
+   0:
+      trim: 
+         0:
+            value: -8
+            mode: 0
+         1:
+            value: 14
+            mode: 0
+         2:
+            value: 22
+            mode: 0
+         3:
+            value: 4
+            mode: 0
+      name: ""
+      swtch: "NONE"
+      fadeIn: 0
+      fadeOut: 0
+      gvars: 
+         0:
+            val: 0
+         1:
+            val: 0
+         2:
+            val: 0
+         3:
+            val: 0
+         4:
+            val: 0
+         5:
+            val: 0
+         6:
+            val: 0
+         7:
+            val: 0
+         8:
+            val: 0
+thrTraceSrc: Thr
+switchWarningState: 
+rssiSource: none
+thrTrimSw: 0
+potsWarnMode: WARN_OFF
+jitterFilter: GLOBAL
+moduleData: 
+   1:
+      type: TYPE_MULTIMODULE
+      subType: 3,0
+      channelsStart: 0
+      channelsCount: 16
+      failsafeMode: NOT_SET
+      mod: 
+         multi: 
+            disableTelemetry: 0
+            disableMapping: 0
+            autoBindMode: 0
+            lowPowerMode: 0
+            receiverTelemetryOff: 0
+            receiverHigherChannels: 0
+            optionValue: 0
+inputNames: 
+   0:
+      val: "Ail"
+   1:
+      val: "Thr"
+   2:
+      val: "Ele"
+   3:
+      val: "Rud"
+potsWarnEnabled: 0
+view: 0
+modelRegistrationID: "*\x15*\x15!\x03%\x07"

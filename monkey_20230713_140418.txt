@@ -1,0 +1,132 @@
+defaults nosave
+
+
+# version
+# Betaflight / STM32F411 (S411) 4.3.2 Nov 28 2022 / 07:27:10 (60c9521) MSP API: 1.44
+# config: manufacturer_id: DAFP, board_name: DARWINF411, version: bff306ae, date: 2022-11-15T12:36:53Z
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name DARWINF411
+manufacturer_id DAFP
+mcu_id 006d002d3132510f30313835
+signature 
+
+# name: Monkey
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# aux
+aux 0 0 0 1000 2000 0 0
+aux 1 1 1 1000 2000 0 0
+aux 2 13 2 1500 2000 0 0
+aux 3 35 3 1500 2000 0 0
+
+# vtxtable
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY 5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B FACTORY 5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E FACTORY 5705 5685 5665    0 5885 5905    0    0
+vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 IMD6     I CUSTOM  5732 5765 5828 5840 5866 5740    0    0
+vtxtable powerlevels 4
+vtxtable powervalues 0 1 2 3
+vtxtable powerlabels 25 200 400 600
+
+# master
+set gyro_lpf1_static_hz = 375
+set gyro_lpf2_static_hz = 750
+set dyn_notch_count = 2
+set dyn_notch_min_hz = 100
+set dyn_notch_max_hz = 1000
+set gyro_lpf1_dyn_min_hz = 375
+set gyro_lpf1_dyn_max_hz = 750
+set acc_calibration = 70,-46,76,1
+set mag_hardware = NONE
+set baro_hardware = NONE
+set blackbox_sample_rate = 1/16
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT300
+set motor_output_reordering = 3,2,1,0,4,5,6,7
+set current_meter = NONE
+set beeper_dshot_beacon_tone = 3
+set small_angle = 180
+set simplified_gyro_filter_multiplier = 150
+set osd_vbat_pos = 2455
+set osd_link_quality_pos = 2081
+set osd_rssi_dbm_pos = 2113
+set osd_tim_2_pos = 2433
+set osd_flymode_pos = 2105
+set osd_throttle_pos = 2401
+set osd_vtx_channel_pos = 2369
+set osd_crosshairs_pos = 2253
+set osd_mah_drawn_pos = 2447
+set osd_craft_name_pos = 2440
+set osd_altitude_pos = 66
+set osd_warnings_pos = 14696
+set osd_avg_cell_voltage_pos = 2423
+set osd_nheading_pos = 333
+set osd_flip_arrow_pos = 2222
+set vtx_power = 4
+set vtx_freq = 5880
+set gyro_1_sensor_align = CW270FLIP
+set gyro_1_align_yaw = 2700
+set rpm_filter_harmonics = 2
+set name = Monkey
+
+profile 0
+
+# profile 0
+set vbat_sag_compensation = 100
+set anti_gravity_gain = 10000
+set iterm_relax_cutoff = 10
+set p_pitch = 56
+set i_pitch = 101
+set d_pitch = 70
+set f_pitch = 137
+set p_roll = 54
+set i_roll = 96
+set d_roll = 61
+set f_roll = 132
+set p_yaw = 54
+set i_yaw = 96
+set f_yaw = 132
+set d_min_roll = 46
+set d_min_pitch = 52
+set thrust_linear = 20
+set dyn_idle_min_rpm = 35
+set simplified_master_multiplier = 110
+set simplified_d_gain = 140
+set simplified_pi_gain = 110
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
