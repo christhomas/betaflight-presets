@@ -1,0 +1,99 @@
+defaults nosave
+
+
+# version
+# Betaflight / STM32F411 (S411) 4.4.0 Apr 11 2023 / 07:46:11 (4605309d8) MSP API: 1.45
+
+# config: YES
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name BETAFPVF411
+manufacturer_id BEFH
+mcu_id 007000353535510336323431
+signature 
+
+# name: hdhero
+
+# feature
+feature -TELEMETRY
+
+# serial
+serial 1 131073 115200 57600 0 115200
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# aux
+aux 0 0 0 1800 2100 0 0
+aux 1 1 1 900 1200 0 0
+aux 2 2 1 1800 2100 0 0
+aux 3 13 2 1800 2100 0 0
+aux 4 35 3 1800 2100 0 0
+aux 5 36 3 900 1200 0 0
+
+# vtxtable
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 2 BOSCAM_B B FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 3 BOSCAM_E E FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 4 FATSHARK F FACTORY    0 5760    0 5800    0    0    0    0
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 IMD6     I FACTORY    0    0    0    0    0    0    0    0
+vtxtable powerlevels 3
+vtxtable powervalues 14 23 0
+vtxtable powerlabels 25 200 0
+
+# master
+set acc_calibration = 31,57,3,1
+set beeper_dshot_beacon_tone = 4
+set small_angle = 180
+set osd_vbat_pos = 2592
+set osd_link_quality_pos = 2048
+set osd_rssi_dbm_pos = 2080
+set osd_vtx_channel_pos = 3625
+set osd_ah_pos = 2126
+set osd_mah_drawn_pos = 2561
+set osd_craft_name_pos = 2613
+set osd_warnings_pos = 14867
+set osd_flip_arrow_pos = 2160
+set osd_core_temp_pos = 3085
+set osd_displayport_device = MSP
+set osd_canvas_width = 50
+set osd_canvas_height = 18
+set vtx_band = 5
+set vtx_channel = 1
+set vtx_power = 1
+set vtx_freq = 5658
+set vcd_video_system = HD
+set craft_name = hdhero
+
+profile 0
+
+profile 1
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 2
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
